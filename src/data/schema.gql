@@ -1,0 +1,25 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type BooksOutput {
+  id: String
+  title: String
+  description: String
+  isbn: String
+}
+
+type Query {
+  findBook(id: String!): BooksOutput!
+  getAllBooks: [BooksOutput!]!
+}
+
+type Mutation {
+  createBooks(createBooksInput: CreateBooksInput!): BooksOutput!
+}
+
+input CreateBooksInput {
+  title: String!
+  description: String!
+  isbn: String!
+}
